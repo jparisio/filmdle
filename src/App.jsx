@@ -63,7 +63,7 @@ export default function App() {
   }
 
   //CURRENT GAME MOVIE BEING GUSSED STORED HERE
-  let currentIndex = 0;
+  let currentIndex = 1;
 
   //time calculation
   const time = formatTime(timeUntilNextDay);
