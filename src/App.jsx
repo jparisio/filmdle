@@ -159,7 +159,7 @@ export default function App() {
           search={search}
         />
       )}
-      {/* <button onClick={resetLocalStorage}>Reset Local Storage</button> */}
+      <button onClick={resetLocalStorage}>Reset Local Storage</button>
       <AnimatePresence>
         {modalOpen && <Modal setOpen={setModalOpen}>Incorrect Answer</Modal>}
         {gameOver && (
