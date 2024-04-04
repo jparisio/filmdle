@@ -52,7 +52,7 @@ export default function App() {
   }
 
   function formatTime(seconds) {
-    if (seconds === 0) {
+    if (seconds >= 0) {
       currentIndex++;
       resetLocalStorage();
     }
