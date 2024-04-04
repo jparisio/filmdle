@@ -54,8 +54,8 @@ export default function App() {
   }
 
   function formatTime(seconds) {
-    if (seconds >= 0) {
-      // currentIndex++;
+    if (seconds <= 0) {
+      currentIndex++;
       resetLocalStorage();
     }
     const hours = Math.floor(seconds / 3600);
