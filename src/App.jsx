@@ -92,6 +92,7 @@ export default function App() {
         });
       }
     }
+    setSearch("");
   }
 
   useEffect(() => {

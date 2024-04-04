@@ -19,3 +19,20 @@
   background-color: white;
   color: black;
 }
+
+@media screen and (max-width: 768px) {
+  .winner-text p {
+    font-size: 10px;
+  }
+  .winner-text h1 {
+    font-size: 10px;
+  }
+
+  .game-over p {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+
+  .game-over h1 {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+}

@@ -23,9 +23,11 @@ export default function GameOver({ title, time }) {
       }}
       className="incorrect-modal"
     >
-      <h2>Game Over</h2>
-      <p>The Correct Answer was: {title}</p>
-      <p>Play the next in: {time}</p>
+      <div className="game-over">
+        <h2>Game Over</h2>
+        <p>The Correct Answer was: {title}</p>
+        <p>Play the next in: {time}</p>
+      </div>
     </motion.div>
   );
 }
