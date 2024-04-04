@@ -1,8 +1,11 @@
-# React + Vite
+# Filmdle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## a film guesses game based on the popular word guessing game wordle
 
-Currently, two official plugins are available:
+play the game  now:
+https://filmdlegame.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- You get three chances to guess the game based on a singular still from the film
+- Each incorrect answer awards you an additional frame for a total of 3 guesses/frames.
+- Users get one try per day, and the film of the day resets at 12:00 est
+
