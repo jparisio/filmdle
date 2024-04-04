@@ -9,7 +9,7 @@ export default function SearchBar({ handleSearch, handleGuess, data, search }) {
   return (
     <>
       <div className="search-container">
-        <div className="dropdown">
+        <div>
           <input
             type="text"
             placeholder="Enter movie guess..."
