@@ -11,6 +11,8 @@ import Winner from "./components/modal/Winner";
 const LIVES_STORAGE_KEY = "filmdle_lives";
 const GAME_OVER_STORAGE_KEY = "filmdle_game_over";
 const WINNER_STORAGE_KEY = "filmdle_winner";
+//CURRENT GAME MOVIE BEING GUSSED STORED HERE
+let currentIndex = 1;
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -53,7 +55,7 @@ export default function App() {
 
   function formatTime(seconds) {
     if (seconds >= 0) {
-      currentIndex++;
+      // currentIndex++;
       resetLocalStorage();
     }
     const hours = Math.floor(seconds / 3600);
@@ -61,9 +63,6 @@ export default function App() {
     const remainingSeconds = seconds % 60;
     return `${hours}h ${minutes}m ${remainingSeconds}s`;
   }
-
-  //CURRENT GAME MOVIE BEING GUSSED STORED HERE
-  let currentIndex = 1;
 
   //time calculation
   const time = formatTime(timeUntilNextDay);
