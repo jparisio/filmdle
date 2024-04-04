@@ -11,7 +11,9 @@ import Winner from "./components/modal/Winner";
 const LIVES_STORAGE_KEY = "filmdle_lives";
 const GAME_OVER_STORAGE_KEY = "filmdle_game_over";
 const WINNER_STORAGE_KEY = "filmdle_winner";
-//CURRENT GAME MOVIE BEING GUSSED STORED HERE
+const LAST_ACCESS_STORAGE_KEY = "filmdle_last_access";
+
+//CURRENT GAME MOVIE BEING GUESSED STORED HERE
 let currentIndex = 1;
 
 export default function App() {
@@ -42,6 +44,23 @@ export default function App() {
     }, 1000); // Update every second
 
     return () => clearInterval(timer); // Clean up the interval on unmount
+  }, []);
+
+  useEffect(() => {
+    const lastAccessTimestamp = localStorage.getItem(LAST_ACCESS_STORAGE_KEY);
+    const currentDate = new Date();
+    const lastAccessDate = lastAccessTimestamp
+      ? new Date(parseInt(lastAccessTimestamp))
+      : null;
+
+    // If it's a new day or the application is accessed for the first time, reset local storage
+    if (!lastAccessDate || currentDate.getDate() !== lastAccessDate.getDate()) {
+      resetLocalStorage();
+      localStorage.setItem(
+        LAST_ACCESS_STORAGE_KEY,
+        currentDate.getTime().toString()
+      );
+    }
   }, []);
 
   function calculateTimeUntilNextDay() {
