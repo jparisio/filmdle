@@ -38,8 +38,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  height: 100vh; /* Set container height to 100% of viewport height */
-  overflow-y: hidden; /* Hide vertical scrollbar */
+  /* height: 100vh;
+  overflow-y: hidden; */
 }
 
 h1 {
