@@ -10,5 +10,9 @@
   {
     "title": "Us",
     "images": ["Us1.jpg", "Us2.jpg", "Us3.jpg"]
+  },
+  {
+    "title": "black swan",
+    "images": ["blackswan1.jpg", "blackswan2.jpg", "blackswan3.jpg"]
   }
 ]

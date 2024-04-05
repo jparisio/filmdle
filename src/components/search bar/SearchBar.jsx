@@ -26,6 +26,7 @@ export default function SearchBar({ handleSearch, handleGuess, data, search }) {
           enter
         </motion.button>
       </div>
+      {/* <AnimatePresence> */}
       {data.length > 0 && search != "" && (
         <motion.div className="suggestion-buttons">
           {data.slice(0, 5).map((movie, index) => (
@@ -41,6 +42,7 @@ export default function SearchBar({ handleSearch, handleGuess, data, search }) {
           ))}
         </motion.div>
       )}
+      {/* </AnimatePresence> */}
     </>
   );
 }
