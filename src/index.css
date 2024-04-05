@@ -13,7 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,
+/* html,
 body,
 #root {
   width: 100%;
@@ -21,7 +21,7 @@ body,
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
+} */
 
 a {
   font-weight: 500;
