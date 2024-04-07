@@ -14,7 +14,7 @@ const WINNER_STORAGE_KEY = "filmdle_winner";
 const LAST_ACCESS_STORAGE_KEY = "filmdle_last_access";
 
 //CURRENT GAME MOVIE BEING GUESSED STORED HERE
-let currentIndex = 2;
+let currentIndex = 3;
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -157,6 +157,22 @@ export default function App() {
     setGameOver(false);
     setWinner(false);
   };
+
+  const [currMovie, setCurrMovie] = useState({
+    title: "placeHolder",
+    images: ["placeholder1.jpg", "placeholder2.jpg", "placeholder3.jpg"],
+  });
+
+  useEffect(() => {
+    fetch("http://localhost:5000/movies").then((res) => {
+      res.json().then((data) => {
+        setCurrMovie(data);
+        // console.log(data);
+      });
+    });
+  }, []);
+
+  // console.log("CURRENT MOVIE TITLE " + currMovie.title);
 
   return (
     <div className="app-container">
