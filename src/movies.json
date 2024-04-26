@@ -17,6 +17,10 @@
   },
   {
     "title": "Scott Pilgrim vs. the World",
-    "images": ["scottpilgrim1.jpg", "scottpilgrim2.jpg", "scottpilgrim3.jpg"]
+    "images": [
+      "ScottPilgrimvs.theWorld1.jpg",
+      "ScottPilgrimvs.theWorld2.jpg",
+      "ScottPilgrimvs.theWorld3.jpg"
+    ]
   }
 ]
