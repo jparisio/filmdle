@@ -6,6 +6,8 @@ export default function SearchBar({ handleSearch, handleGuess, data, search }) {
   function handleTitleClick(text) {
     handleSearch({ target: { value: text } });
   }
+  //store data which is a string into an array
+  const movie = [data];
   return (
     <>
       <div className="search-container">
@@ -27,17 +29,17 @@ export default function SearchBar({ handleSearch, handleGuess, data, search }) {
         </motion.button>
       </div>
       {/* <AnimatePresence> */}
-      {data.length > 0 && search != "" && (
+      {search != "" && (
         <motion.div className="suggestion-buttons">
-          {data.slice(0, 5).map((movie, index) => (
+          {movie.map((movie, index) => (
             <motion.button
-              key={movie.id}
-              onClick={() => handleTitleClick(movie.titleNameText)}
+              key={index}
+              onClick={() => handleTitleClick(movie)}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              {movie.titleNameText}
+              {movie}
             </motion.button>
           ))}
         </motion.div>

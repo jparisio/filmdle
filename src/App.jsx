@@ -111,20 +111,17 @@ export default function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://imdb146.p.rapidapi.com/v1/find/?query=${search}`;
+      const url = `http://www.omdbapi.com/?apikey=8775d775&t=${search}`;
+      // const url = `http://www.omdbapi.com/?apikey=8775d775&${search}`;
       const options = {
         method: "GET",
-        headers: {
-          "X-RapidAPI-Key":
-            "c8701b0353msh1aa1799639082f5p1a6d11jsn766c64bf95c9",
-          "X-RapidAPI-Host": "imdb146.p.rapidapi.com",
-        },
       };
 
       try {
         const response = await fetch(url, options);
         const data = await response.json();
-        setMovies(data.titleResults.results);
+        setMovies(data.Title);
+        console.log(data.Title);
         setIsLoading(false);
       } catch (error) {
         console.error(error);
