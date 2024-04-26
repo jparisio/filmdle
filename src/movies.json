@@ -14,5 +14,9 @@
   {
     "title": "black swan",
     "images": ["blackswan1.jpg", "blackswan2.jpg", "blackswan3.jpg"]
+  },
+  {
+    "title": "scott pilgrim",
+    "images": ["scottpilgrim1.jpg", "scottpilgrim2.jpg", "scottpilgrim3.jpg"]
   }
 ]
