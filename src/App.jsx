@@ -14,7 +14,7 @@ const WINNER_STORAGE_KEY = "filmdle_winner";
 const LAST_ACCESS_STORAGE_KEY = "filmdle_last_access";
 
 //CURRENT GAME MOVIE BEING GUESSED STORED HERE
-let currentIndex = 4;
+let currentIndex = 0;
 
 export default function App() {
   const [movies, setMovies] = useState([]);
